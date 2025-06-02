@@ -1,0 +1,15 @@
+{
+   "manifest_version": 3,
+   "name": "YouTube Feed Remover",
+   "version": "1.0",
+   "description": "YouTube Home Page Feed Remover",
+   "permissions": ["tabs", "scripting"],
+   "host_permissions": ["https://www.youtube.com/"],
+   "content_scripts": [
+      {
+         "matches": ["https://www.youtube.com/"],
+         "js": ["content.js"],
+         "run_at": "document_idle"
+      }
+   ]
+}
